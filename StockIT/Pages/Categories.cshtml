@@ -1,0 +1,30 @@
+@page "/Categories"
+@model StockIT.Pages.CategoriesModel
+@{
+}
+<h1>Categories</h1>
+
+@if (Model.Categories.Any())
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Category name Name</th>
+                <th>Qty</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var category in Model.Categories)
+            {
+                <tr>
+                    <td><a asp-route-categoryId="@category.Id" asp-page="/CategoryEdit">@category.Name</a></td>
+                    <td>@category.Products.Count()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No in products in given category.</p>
+}

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34804.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockIT", "StockIT\StockIT.csproj", "{C13817DF-91A3-48CB-91CE-88D1A63DCCDF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockIT.BLL", "StockIT.BLL\StockIT.BLL.csproj", "{8FB48BA7-2DDB-4483-9E4D-8B2938B027E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C13817DF-91A3-48CB-91CE-88D1A63DCCDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C13817DF-91A3-48CB-91CE-88D1A63DCCDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C13817DF-91A3-48CB-91CE-88D1A63DCCDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C13817DF-91A3-48CB-91CE-88D1A63DCCDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FB48BA7-2DDB-4483-9E4D-8B2938B027E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FB48BA7-2DDB-4483-9E4D-8B2938B027E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FB48BA7-2DDB-4483-9E4D-8B2938B027E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FB48BA7-2DDB-4483-9E4D-8B2938B027E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54D75E8C-40C0-4C7A-845A-5D60B91503FC}
+	EndGlobalSection
+EndGlobal

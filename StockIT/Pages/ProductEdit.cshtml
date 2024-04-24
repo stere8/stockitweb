@@ -1,0 +1,67 @@
+﻿@page "/ProductEdit"
+@using System.Globalization
+@using StockIT.Models
+@model StockIT.Pages.ProductEditModel
+@{
+    ViewData["Title"] = "Product Create";
+}
+<head>
+    <script src="~/ckeditor/ckeditor.js"></script>
+</head>
+
+<h2>Edit Product</h2>
+
+<form method="post" enctype="multipart/form-data">
+
+    <div class="form-group">
+        <label for="@Model.ProductModel.Name">Name:</label>
+        <input type="text" value="@Model.ProductModel.Name" id="Name" name="Name" required>
+    </div>
+
+    <div class="form-group">
+        <input type="text" value="@Model.ProductModel.Id" id="id" hidden="hidden" name="Name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="@Model.ProductModel.Description">Description:</label>
+        <textarea id="description" name="Description" required>@Html.Raw(@Model.ProductModel.Description)</textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="@Model.ProductModel.Quantity">Quantity:</label>
+        <input type="number" id="Quantity" value="@Model.ProductModel.Quantity" name="Quantity" required>
+    </div>
+    <div class="form-group">
+        <label for="@Model.ProductModel.Price">Price</label>
+        <input type="number" id="Price" name="Price" value="@Model.ProductModel.Price.ToString(CultureInfo.InvariantCulture)" required step="0.01">
+    </div>
+
+    <div class="form-group">
+        <label for="@Model.ProductModel.CategoryId">Category:</label>
+        <select id="@Model.ProductModel.CategoryId" name="CategoryId" required>
+            <option disabled value="">-- Choose Product Category</option>
+            @foreach (Category category in @Model.Categories)
+            {
+                <!option @(category.Id == Model.ProductModel.CategoryId ? "selected" : "") value="@category.Id">@category.Name</!option>
+            }
+        </select>
+    </div>
+    <script>
+        ClassicEditor
+            .create(document.querySelector("#description"))
+            .catch( error => {
+                console.error( error ).minHeight ;
+            } );
+    </script>
+
+
+    <div class="form-group">
+        <img src="/uploads/@Model.ProductModel.Image.FileName" alt="Current pic"/>
+        <label for="@Model.ProductModel.Image">Product Images (Optional):</label>
+        <input type="file" value="@Model.ProductModel.Image" id="image" name="Image" accept="image/*" class="form-control">
+        <small class="form-text text-muted">Leave blank to keep existing images.</small>
+    </div>
+
+
+    <button type="submit">Save Changes</button>
+</form>

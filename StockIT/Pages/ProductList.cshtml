@@ -1,0 +1,46 @@
+﻿@page "/Products"
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Product List";
+}
+
+@model StockIT.Pages.ProductListModel
+
+<h1>Products</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <form method="get">
+            <div class="form-group">
+                <label for="searchQuery">Search Products:</label>
+                <input type="text" class="form-control" id="searchQuery" name="searchQuery" placeholder="Enter product FirstName or keyword">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@if (Model.ProductsList.Any())
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Qty</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model.ProductsList)
+            {
+                <tr>
+                    <td><a asp-route-productId="@product.Id" asp-page="/ProductDetails">@product.Name</a></td>
+                    <td>@product.Quantity</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No products found matching your search criteria.</p>
+}

@@ -1,0 +1,66 @@
+﻿@page "/"
+@{
+    ViewData["Title"] = "Home";
+}
+@model StockIT.Pages.IndexModel
+
+<h1>Product Management</h1>
+
+<h2>Product Categories</h2>
+
+@if (Model.ViewModel.Categories == null || !Model.ViewModel.Categories.Any())
+{
+    <p>No categories found.</p>
+}
+else
+{
+    <ul>
+        @foreach (var category in Model.ViewModel.Categories)
+        {
+            <li>
+                <a asp-route-CategoryId="@category.Id" asp-page="/ProductList">@category.Name</a>  </li>
+        }
+    </ul>
+}
+
+@if (Model.ViewModel.SelectedCategoryId == null)
+{
+    <form asp-page-handler="AddCategory" method="post">
+        <label for="categoryName">Category Name:</label>
+        <input type="text" id="categoryName" name="CategoryName" data-val="true" data-val-required="Category FirstName is required." required /> <button type="submit">Add Category</button>
+    </form>
+}
+else
+{
+    <form asp-page-handler="SelectCategory" method="post">
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" name="ProductName" data-val="true" data-val-required="Product FirstName is required." required />
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="Description"></textarea>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="Quantity" data-val="true" data-val-range="The field Quantity must be between 1 and 1000." data-val-range-min="1" data-val-range-max="1000" required />  <label for="categoryId">Category:</label>
+        <select id="categoryId" name="CategoryId">
+            @foreach (var category in Model.ViewModel.Categories)
+            {
+                <option value="@category.Id">@category.Name</option>
+            }
+        </select>
+
+        <button type="submit">Add Product</button>
+    </form>
+
+    @if (Model.ViewModel.SelectedCategory != null && Model.ViewModel.Categories.Any())
+    {
+        <h3>Products for Category: @Model.ViewModel.SelectedCategory.Name</h3>
+        <ul>
+            @foreach (var product in Model.ViewModel.Products)
+            {
+                <li>@product.Name</li>
+            }
+        </ul>
+    }
+}
+
+

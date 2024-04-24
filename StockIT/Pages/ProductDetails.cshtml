@@ -1,0 +1,32 @@
+﻿@page "/ProductDetails"
+@model StockIT.Pages.ProductDetailsModel
+@{
+    ViewData["Title"] = "Product Details";
+}
+<div class="container mt-3">
+    <h1>Product Details</h1>
+    <hr/>
+    <a asp-page="/ProductEdit" asp-route-productId="@Model.ProductId" class="btn btn-outline-primary">Edit</a>
+    <a asp-action="DeleteProduct" asp-controller="Product" asp-route-productId="@Model.ProductId" asp-route-productId="@Model.ProductId" class="btn btn-outline-danger">Delete</a>
+    <div class="row">
+        <div class="col-md-6">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <img src="@(Model.ProductModel.ImagePath != null ? Model.ProductModel.ImagePath : "/images/no-image.jpg")" class="img-fluid" alt="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="mb-3">
+                <h1>@Model.ProductModel.Name</h1>
+                <h2>@Model.ProductModel.category.Name</h2>
+            </div>
+            <div class="mb-3">
+                <p>Quantity : @Model.ProductModel.Quantity </p>
+                <p>Price : @Model.ProductModel.Price.ToString("C") </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <label>Description:</label>
+        <p>@Html.Raw(Model.ProductModel.Description)</p>
+    </div>
+</div>

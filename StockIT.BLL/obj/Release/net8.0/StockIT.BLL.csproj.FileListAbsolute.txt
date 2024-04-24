@@ -1,0 +1,14 @@
+C:\Users\twizo\source\repos\OCP\StockIT\StockIT.BLL\bin\Release\net8.0\StockIT.BLL.deps.json
+C:\Users\twizo\source\repos\OCP\StockIT\StockIT.BLL\bin\Release\net8.0\StockIT.BLL.dll
+C:\Users\twizo\source\repos\OCP\StockIT\StockIT.BLL\bin\Release\net8.0\StockIT.BLL.pdb
+C:\Users\twizo\source\repos\OCP\StockIT\StockIT.BLL\obj\Release\net8.0\StockIT.BLL.csproj.AssemblyReference.cache
+C:\Users\twizo\source\repos\OCP\StockIT\StockIT.BLL\obj\Release\net8.0\StockIT.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\twizo\source\repos\OCP\StockIT\StockIT.BLL\obj\Release\net8.0\StockIT.BLL.AssemblyInfoInputs.cache
+C:\Users\twizo\source\repos\OCP\StockIT\StockIT.BLL\obj\Release\net8.0\StockIT.BLL.AssemblyInfo.cs
+C:\Users\twizo\source\repos\OCP\StockIT\StockIT.BLL\obj\Release\net8.0\StockIT.BLL.csproj.CoreCompileInputs.cache
+C:\Users\twizo\source\repos\OCP\StockIT\StockIT.BLL\obj\Release\net8.0\StockIT.BLL.sourcelink.json
+C:\Users\twizo\source\repos\OCP\StockIT\StockIT.BLL\obj\Release\net8.0\StockIT.BLL.dll
+C:\Users\twizo\source\repos\OCP\StockIT\StockIT.BLL\obj\Release\net8.0\refint\StockIT.BLL.dll
+C:\Users\twizo\source\repos\OCP\StockIT\StockIT.BLL\obj\Release\net8.0\StockIT.BLL.pdb
+C:\Users\twizo\source\repos\OCP\StockIT\StockIT.BLL\obj\Release\net8.0\ref\StockIT.BLL.dll
+C:\Users\twizo\source\repos\OCP\StockIT\StockIT.BLL\bin\Release\net8.0\StockIT.BLL.appsettings.json
