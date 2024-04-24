@@ -11,5 +11,4 @@ C:\Users\twizo\source\repos\OCP\StockIT\StockIT.BLL\obj\Debug\net8.0\refint\Stoc
 C:\Users\twizo\source\repos\OCP\StockIT\StockIT.BLL\obj\Debug\net8.0\StockIT.BLL.pdb
 C:\Users\twizo\source\repos\OCP\StockIT\StockIT.BLL\obj\Debug\net8.0\ref\StockIT.BLL.dll
 C:\Users\twizo\source\repos\OCP\StockIT\StockIT.BLL\obj\Debug\net8.0\StockIT.BLL.sourcelink.json
-C:\Users\twizo\source\repos\OCP\StockIT\StockIT.BLL\bin\Debug\net8.0\appsettings.Development.json
-C:\Users\twizo\source\repos\OCP\StockIT\StockIT.BLL\bin\Debug\net8.0\appsettings.json
+C:\Users\twizo\source\repos\OCP\StockIT\StockIT.BLL\bin\Debug\net8.0\StockIT.BLL.appsettings.json
