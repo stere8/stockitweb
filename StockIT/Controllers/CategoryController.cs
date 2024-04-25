@@ -16,18 +16,23 @@ public CategoryController(IProductService productService, ICategoryService categ
     }
     public IActionResult DeleteCategory()
     {
-        var productId = int.Parse(Request.Query["productId"]);
         try
         {
-            _productService.DeleteProduct(productId);
+            var categoryId = int.Parse(Request.Query["categoryId"]);
+            var productIdList =_productService.GetProductsByCategory(categoryId);
+            foreach (var product in productIdList)
+            {
+                _productService.DeleteProduct(product.Id);
+            }
+            _categoryService.DeleteCategory(categoryId);
             TempData["Success"] = "true";
-            TempData["Message"] = "Products deleted successfully!";
+            TempData["Message"] = "Category deleted successfully!";
             return RedirectToPage("/OperationComplete");
         }
         catch (Exception ex)
         {
             TempData["Success"] = "false";
-            TempData["Message"] = "Products delete failed: " + ex.Message; // More specific error message
+            TempData["Message"] = "Category delete failed: " + ex.Message; // More specific error message
             return RedirectToPage("/OperationComplete");
         }
     }

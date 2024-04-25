@@ -565,6 +565,14 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\twizo\\source\\repos\\OCP\\StockIT\\StockIT\\wwwroot\\uploads\\CVOreste(EN).pdf",
+      "PackagePath": "staticwebassets\\uploads\\CVOreste(EN).pdf"
+    },
+    {
+      "Id": "C:\\Users\\twizo\\source\\repos\\OCP\\StockIT\\StockIT\\wwwroot\\uploads\\CVOreste(PL).pdf",
+      "PackagePath": "staticwebassets\\uploads\\CVOreste(PL).pdf"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.StockIT.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

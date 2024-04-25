@@ -39,7 +39,24 @@
     <p>
         Hey, check out my  <a href="https://ocportfolio.azurewebsites.net/">Portfolio</a>.! Thank you for taking an interest in my work. This page serves as a comprehensive showcase of my programming styles, skills, and overall profile. I am a passionate developer adept at crafting technical solutions that are not only functional but also linguistically sound.
     </p>
-    <p>**Download my CV to learn more about my experience and skills.** Download CV</p>
+    <p>
+        **Download my CV to learn more about my experience and skills.**
+        <span class="dropdown-text">Download CV:</span>
+        <select class="dropdown-select">
+            <option disabled selected> -- Select a version of the CV --</option>
+            <option value="./uploads/CVOreste(PL).pdf" download="CV_Polish.pdf">Polish</option>
+            <option value="./uploads/CVOreste(EN).pdf" download="CV_English.pdf">English</option>
+        </select>
+    </p>
+    <script>
+        const dropdownSelect = document.querySelector('.dropdown-select');
+
+        dropdownSelect.addEventListener('change', (event) => {
+            const selectedValue = event.target.value;
+            window.location.href = selectedValue;
+        });
+    </script>
+
     <p>
         I'm Oreste Twizeyimana, a Programmer Developer with over 2 years of experience in the field. I'm passionate about creating innovative and user-friendly software solutions.
     </p>

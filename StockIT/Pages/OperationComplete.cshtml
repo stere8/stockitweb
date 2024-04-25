@@ -4,7 +4,7 @@ ViewData["Title"] = "Operation Complete";
 }
 
 <div class="operation-result">
-    @if (TempData["Success"].ToString().ToLower() == "true")
+    @if (TempData["Success"]?.ToString().ToLower() == "true")
     {
         <span style="color: green;">&#10004;</span> <p>OperationComplete!</p> }
     else
